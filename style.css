@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+:root { --ink:#1d2433; --muted:#758095; --line:#e8ebf2; --bg:#f5f7fb; --primary:#6848e8; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:Inter,Arial,sans-serif; background:var(--bg); color:var(--ink); }
+.topbar { height:70px; background:#fff; display:flex; align-items:center; justify-content:space-between; padding:0 5%; border-bottom:1px solid var(--line); }
+.topbar>div { display:flex; gap:12px; align-items:center; }
+.logo { display:grid; place-items:center; width:34px; height:34px; background:var(--primary); color:#fff; border-radius:10px; font-weight:800; }
+.status { color:#27805a; font-size:12px; background:#eaf8f0; padding:8px 12px; border-radius:30px; }
+.status i { display:inline-block; width:7px; height:7px; border-radius:50%; background:#2eae70; margin-right:6px; }
+.container { max-width:1200px; margin:34px auto; padding:0 22px; }
+.welcome { display:flex; align-items:center; justify-content:space-between; gap:20px; margin-bottom:24px; }
+h1 { font-size:30px; margin:5px 0 8px; } h3 { margin:0 0 7px; font-size:16px; }
+.eyebrow { font-size:11px; letter-spacing:1.5px; color:var(--primary); font-weight:800; margin:0; }
+.muted { color:var(--muted); font-size:12px; margin:0; }
+.panel { background:#fff; border:1px solid var(--line); border-radius:16px; box-shadow:0 4px 18px #27334d08; }
+.filters { display:flex; align-items:end; gap:14px; padding:17px; margin-bottom:20px; flex-wrap:wrap; }
+label { display:flex; flex-direction:column; gap:7px; font-size:11px; color:var(--muted); font-weight:600; }
+input,select { min-width:150px; padding:10px 11px; border:1px solid #dfe3ed; border-radius:8px; color:var(--ink); background:#fff; font:inherit; font-size:12px; }
+button { border:0; border-radius:8px; padding:11px 15px; cursor:pointer; font-weight:700; font-size:12px; }
+.primary { background:var(--primary); color:white; } .secondary { background:#f0efff; color:var(--primary); }
+.cards { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:20px; }
+.stat { padding:20px; } .stat-icon { display:grid; place-items:center; width:34px; height:34px; border-radius:10px; font-weight:800; }
+.purple { background:#efebff; color:#6848e8; } .orange { background:#fff0e6; color:#e87927; } .green { background:#e7f8ef; color:#23975d; } .blue { background:#e8f2ff; color:#3276d9; }
+.stat p { font-size:12px; color:var(--muted); margin:17px 0 6px; } .stat h2 { font-size:24px; margin:0 0 8px; overflow-wrap:anywhere; } .stat small { font-size:10px; color:#929bad; }
+.chart-grid { display:grid; grid-template-columns:1.4fr 1fr; gap:18px; margin-bottom:20px; }
+.chart-panel { padding:22px; min-height:330px; } .chart-panel canvas { width:100% !important; height:245px !important; }
+.panel-heading { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:18px; }
+.table-panel { padding:22px; } .table-wrap { overflow-x:auto; }
+table { width:100%; border-collapse:collapse; min-width:620px; text-align:left; font-size:12px; }
+th { color:var(--muted); font-size:10px; text-transform:uppercase; letter-spacing:.7px; background:#fafbfe; }
+th,td { padding:14px 12px; border-bottom:1px solid var(--line); } td { color:#4b5568; } .right { text-align:right; }
+.badge { display:inline-block; padding:5px 8px; border-radius:20px; font-size:10px; text-transform:capitalize; font-weight:700; }
+.badge.income { background:#e8f8ef; color:#248654; } .badge.expense { background:#fff0e8; color:#c55e25; }
+.empty { text-align:center; color:var(--muted); padding:28px; }
+.message { color:#bd4a35; font-size:12px; margin:12px 2px; } footer { text-align:center; color:#9aa2b2; font-size:11px; padding:24px 0 10px; }
+@media(max-width:850px) { .cards { grid-template-columns:repeat(2,1fr); } .chart-grid { grid-template-columns:1fr; } }
+@media(max-width:540px) { .container { padding:0 13px; margin:22px auto; } .topbar { padding:0 16px; } .welcome { align-items:flex-start; flex-direction:column; } h1 { font-size:24px; } .filters label, .filters input, .filters select { width:100%; } .filters button { flex:1; } .cards { gap:10px; } .stat { padding:14px; } .stat h2 { font-size:19px; } .stat small { line-height:1.5; } .chart-panel,.table-panel { padding:15px; } }
